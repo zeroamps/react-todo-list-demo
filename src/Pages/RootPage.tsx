@@ -8,10 +8,10 @@ export function RootPage() {
           React Todo List Demo
         </Link>
         <div className="flex gap-2">
-          <Link to="/login" className="rounded-lg bg-lime-600 px-4 font-semibold text-white">
+          <Link to="/login" className="btn">
             Log in
           </Link>
-          <Link to="/signup" className="rounded-lg bg-lime-600 px-4 font-semibold text-white">
+          <Link to="/signup" className="btn">
             Sign up
           </Link>
         </div>

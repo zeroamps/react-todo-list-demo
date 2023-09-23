@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { RootPage } from './Pages/RootPage';
 import { WelcomePage } from './Pages/WelcomePage';
-import { DashboardPage } from './Pages/DashboardPage';
+import { TodoListPage } from './Pages/TodoListPage';
 import { LogInPage } from './Pages/LogInPage';
 import { SignUpPage } from './Pages/SignUpPage';
 import './styles.css';
@@ -15,7 +15,7 @@ const router = createBrowserRouter(
       element: <RootPage />,
       children: [
         { path: '/', element: <WelcomePage /> },
-        { path: '/dashboard', element: <DashboardPage /> },
+        { path: '/todolist', element: <TodoListPage /> },
         { path: '/login', element: <LogInPage /> },
         { path: '/signup', element: <SignUpPage /> }
       ]

@@ -35,7 +35,7 @@ export function SignUpPage() {
             className="rounded-lg"
           />
         </div>
-        <button type="submit" className="rounded-lg bg-lime-600 px-8 py-2 text-lg font-semibold text-white">
+        <button type="submit" className="btn-lg">
           Sign up
         </button>
       </form>
