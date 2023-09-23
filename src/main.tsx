@@ -1,9 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { WelcomePage } from './Pages/WelcomePage';
+import { DashboardPage } from './Pages/DashboardPage';
+import { LogInPage } from './Pages/LogInPage';
+import { SignUpPage } from './Pages/SignUpPage';
 import './styles.css';
+
+const router = createBrowserRouter(
+  [
+    { path: '/', element: <WelcomePage /> },
+    { path: '/dashboard', element: <DashboardPage /> },
+    { path: '/login', element: <LogInPage /> },
+    { path: '/signup', element: <SignUpPage /> }
+  ],
+  {
+    basename: import.meta.env.BASE_URL
+  }
+);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <h1 className="text-center text-9xl font-light">React Todo List Demo</h1>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
