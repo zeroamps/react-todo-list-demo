@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { RootPage } from './Pages/RootPage';
-import { WelcomePage } from './Pages/WelcomePage';
-import { TodoListPage } from './Pages/TodoListPage';
-import { LogInPage } from './Pages/LogInPage';
-import { SignUpPage } from './Pages/SignUpPage';
+import { RootPage } from './pages/Root/RootPage';
+import { WelcomePage } from './pages/WelcomePage';
+import { TodoListPage } from './pages/TodoListPage';
+import { LogInPage } from './pages/LogInPage';
+import { SignUpPage } from './pages/SignUpPage';
 import './styles.css';
 
 const router = createBrowserRouter(

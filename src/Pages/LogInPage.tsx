@@ -15,8 +15,8 @@ export function LogInPage() {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-8">
       <h1 className="text-5xl font-light">Log in</h1>
-      <form className="flex flex-col gap-4">
-        <div className="flex gap-1">
+      <form className="flex w-3/4 flex-col gap-4 md:w-auto">
+        <div className="flex flex-col gap-1 md:flex-row">
           <input
             type="email"
             name="email"
@@ -41,7 +41,7 @@ export function LogInPage() {
         </button>
       </form>
       <p>
-        <Link to="/signup" className="text-yellow-950 underline">
+        <Link to="/signup" className="underline">
           Don't have an account?
         </Link>
       </p>
