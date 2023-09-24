@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { RootPage } from './pages/Root/RootPage';
 import { WelcomePage } from './pages/WelcomePage';
-import { TodoListPage } from './pages/TodoListPage';
+import { TodoListPage } from './pages/TodoList/TodoListPage';
 import { LogInPage } from './pages/LogInPage';
 import { SignUpPage } from './pages/SignUpPage';
 import './styles.css';

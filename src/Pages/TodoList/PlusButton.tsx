@@ -2,7 +2,7 @@ type Props = {
   onClick: () => void;
 };
 
-export function BarsButton({ onClick }: Props) {
+export function PlusButton({ onClick }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,9 +10,9 @@ export function BarsButton({ onClick }: Props) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="h-6 w-6 cursor-pointer md:hidden"
+      className="h-6 w-6 cursor-pointer"
       onClick={onClick}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
     </svg>
   );
 }

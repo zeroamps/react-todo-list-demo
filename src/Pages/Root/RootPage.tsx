@@ -7,11 +7,11 @@ export function RootPage() {
   const [hidden, setHidden] = useState(true);
   return (
     <>
-      <header className="fixed flex w-full justify-between bg-yellow-400 p-4">
+      <nav className="fixed flex w-full justify-between bg-yellow-400 p-4">
         <Link className="font-semibold" to="/">
           React Todo List Demo
         </Link>
-        <nav
+        <div
           onClick={() => setHidden(true)}
           className={classNames(
             { hidden: hidden },
@@ -24,9 +24,9 @@ export function RootPage() {
           <Link to="/signup" className="btn block py-2 text-center md:inline md:py-0">
             Sign up
           </Link>
-        </nav>
+        </div>
         <BarsButton onClick={() => setHidden((value) => !value)} />
-      </header>
+      </nav>
       <main className="h-full pt-14">
         <Outlet />
       </main>
