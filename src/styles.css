@@ -5,20 +5,6 @@
 @layer base {
   html,
   body {
-    @apply h-full text-yellow-950;
-  }
-}
-
-@layer components {
-  .btn-xl {
-    @apply rounded-lg bg-lime-600 px-16 py-4 text-xl font-semibold text-white;
-  }
-
-  .btn-lg {
-    @apply rounded-lg bg-lime-600 px-8 py-2 text-lg font-semibold text-white;
-  }
-
-  .btn {
-    @apply rounded-lg bg-lime-600 px-4 font-semibold text-white;
+    @apply h-full;
   }
 }
