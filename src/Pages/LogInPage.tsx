@@ -36,7 +36,7 @@ export function LogInPage() {
             className="rounded-lg"
           />
         </div>
-        <button type="submit" className="btn-lg">
+        <button type="submit" className="rounded-lg bg-lime-600 px-8 py-2 text-lg font-semibold text-white">
           Log in
         </button>
       </form>
