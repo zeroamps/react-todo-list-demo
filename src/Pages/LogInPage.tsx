@@ -7,9 +7,7 @@ export function LogInPage() {
       email: '',
       password: ''
     },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    }
+    onSubmit: (values) => console.log(values)
   });
 
   return (

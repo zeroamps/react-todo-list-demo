@@ -6,9 +6,7 @@ export function SignUpPage() {
       email: '',
       password: ''
     },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    }
+    onSubmit: (values) => console.log(values)
   });
 
   return (
