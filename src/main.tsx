@@ -2,23 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
-import { PrivateRoutes } from './components/PrivateRoutes';
+import { PrivateRoute } from './components/PrivateRoute';
 import { RootPage } from './pages/Root/RootPage';
 import { WelcomePage } from './pages/WelcomePage';
 import { TodoListPage } from './pages/TodoList/TodoListPage';
 import { LogInPage } from './pages/LogInPage';
 import { SignUpPage } from './pages/SignUpPage';
+import { logInPath, rootPath, signUpPath, todoListPath } from './routes';
 import './styles.css';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootPage />}>
-      <Route index path="/" element={<WelcomePage />} />
-      <Route path="/todolist" element={<PrivateRoutes />}>
+    <Route path={rootPath} element={<RootPage />}>
+      <Route index path={rootPath} element={<WelcomePage />} />
+      <Route path={todoListPath} element={<PrivateRoute />}>
         <Route index element={<TodoListPage />} />
       </Route>
-      <Route path="/login" element={<LogInPage />} />
-      <Route path="/signup" element={<SignUpPage />} />
+      <Route path={logInPath} element={<LogInPage />} />
+      <Route path={signUpPath} element={<SignUpPage />} />
     </Route>
   ),
   {

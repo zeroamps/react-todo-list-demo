@@ -9,14 +9,15 @@ import {
 } from 'firebase/auth';
 import { auth } from '../firebase';
 
-export type AuthContextType = {
+export type AuthContext = {
   currentUser: User | null;
+  authenticated: boolean;
   login: (email: string, password: string) => Promise<UserCredential>;
   signup: (email: string, password: string) => Promise<UserCredential>;
   logout: () => Promise<void>;
 };
 
-export const AuthContext = createContext<AuthContextType | null>(null);
+export const AuthContext = createContext<AuthContext>({} as AuthContext);
 
 type Props = {
   children: React.ReactNode;
@@ -48,8 +49,9 @@ export function AuthProvider({ children }: Props) {
     return unsubscribe;
   }, []);
 
-  const value: AuthContextType = {
+  const value = {
     currentUser,
+    authenticated: currentUser ? true : false,
     login,
     signup,
     logout

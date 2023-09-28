@@ -1,4 +1,4 @@
-import { CloseButton } from '../../components/CloseButton';
+import { CloseButton } from './CloseButton';
 import { ModalDialog } from '../../components/ModalDialog';
 
 export type Props = {
