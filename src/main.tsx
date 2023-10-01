@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import { AuthProvider } from './contexts/AuthContext';
+import { logInPath, rootPath, signUpPath, todoListPath } from './routes';
+import { AuthProvider } from './contexts/AuthProvider';
 import { PrivateRoute } from './components/PrivateRoute';
 import { RootPage } from './pages/Root/RootPage';
 import { WelcomePage } from './pages/WelcomePage';
 import { TodoListPage } from './pages/TodoList/TodoListPage';
 import { LogInPage } from './pages/LogInPage';
 import { SignUpPage } from './pages/SignUpPage';
-import { logInPath, rootPath, signUpPath, todoListPath } from './routes';
 import './styles.css';
 
 const router = createBrowserRouter(
