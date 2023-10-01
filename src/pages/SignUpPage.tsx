@@ -73,7 +73,7 @@ export function SignUpPage() {
           type="submit"
           form="form"
           disabled={loading}
-          className="rounded-lg bg-lime-600 px-8 py-2 text-lg font-semibold text-white">
+          className="rounded-lg bg-lime-600 px-8 py-2 text-lg font-semibold text-white disabled:opacity-50">
           Sign up
         </button>
       </form>
