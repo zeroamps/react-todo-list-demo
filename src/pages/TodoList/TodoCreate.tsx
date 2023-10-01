@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { TodoItemEditDialog } from './TodoItemEditDialog';
+import { TodoEditDialog } from './TodoEditDialog';
 
-export function TodoItemCreate() {
+export function TodoCreate() {
   const [showEditDialog, setshowEditDialog] = useState(false);
 
   return (
@@ -13,7 +13,7 @@ export function TodoItemCreate() {
           Create
         </button>
       </div>
-      {showEditDialog && <TodoItemEditDialog onClose={() => setshowEditDialog(false)} />}
+      {showEditDialog && <TodoEditDialog onClose={() => setshowEditDialog(false)} />}
     </>
   );
 }

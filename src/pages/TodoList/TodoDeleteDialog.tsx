@@ -5,7 +5,7 @@ export type Props = {
   onClose: () => void;
 };
 
-export function TodoItemDeleteDialog({ onClose }: Props) {
+export function TodoDeleteDialog({ onClose }: Props) {
   function handleDelete() {
     onClose();
   }

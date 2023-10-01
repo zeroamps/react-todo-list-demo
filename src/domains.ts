@@ -1,5 +1,6 @@
-export interface TodoItem {
+export interface Todo {
   id: string;
   title: string;
   description: string;
+  userId: string;
 }

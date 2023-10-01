@@ -6,7 +6,7 @@ export type Props = {
   onClose: () => void;
 };
 
-export function TodoItemEditDialog({ onClose }: Props) {
+export function TodoEditDialog({ onClose }: Props) {
   const formik = useFormik({
     initialValues: {
       title: '',
