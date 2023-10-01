@@ -1,5 +1,5 @@
 import { CloseButton } from './CloseButton';
-import { ModalDialog } from '../../components/ModalDialog';
+import { ModalDialog } from '../../../components/ModalDialog';
 
 export type Props = {
   onClose: () => void;

@@ -3,7 +3,7 @@ import { EditButton } from './EditButton';
 import { DeleteButton } from './DeleteButton';
 import { TodoEditDialog } from './TodoEditDialog';
 import { TodoDeleteDialog } from './TodoDeleteDialog';
-import { Todo } from '../../domains';
+import { Todo } from '../../../domains';
 
 type Props = {
   todo: Todo;
