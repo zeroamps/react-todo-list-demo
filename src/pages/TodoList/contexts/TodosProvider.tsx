@@ -1,9 +1,9 @@
-import { Dispatch, createContext } from 'react';
-import { TodosReducerAction, useTodosReducer } from '../hooks/useTodosReducer';
+import { createContext } from 'react';
+import { TodosDispatchActions, useTodosReducer } from '../hooks/useTodosReducer';
 import { Todo } from '../../../domains';
 
 export const TodosContext = createContext<Todo[]>([]);
-export const TodosDispatchContext = createContext<Dispatch<TodosReducerAction> | null>(null);
+export const TodosDispatchContext = createContext<TodosDispatchActions>({} as TodosDispatchActions);
 
 type Props = {
   children: React.ReactNode;

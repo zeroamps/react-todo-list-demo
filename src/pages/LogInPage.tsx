@@ -19,7 +19,7 @@ export function LogInPage() {
     initialValues: { email: '', password: '' },
     validationSchema: yup.object().shape({
       email: yup.string().email().required(),
-      password: yup.string().required('Required')
+      password: yup.string().required()
     }),
     onSubmit: (values) => handleSubmit(values)
   });

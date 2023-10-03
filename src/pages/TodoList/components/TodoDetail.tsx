@@ -23,8 +23,8 @@ export function TodoDetail({ todo }: Props) {
           <DeleteButton onClick={() => setshowDeleteDialog(true)} />
         </div>
       </div>
-      {showDeleteDialog && <TodoDeleteDialog onClose={() => setshowDeleteDialog(false)} />}
-      {showEditDialog && <TodoEditDialog onClose={() => setshowEditDialog(false)} />}
+      {showDeleteDialog && <TodoDeleteDialog todoId={todo.id} onClose={() => setshowDeleteDialog(false)} />}
+      {showEditDialog && <TodoEditDialog todo={todo} onClose={() => setshowEditDialog(false)} />}
     </>
   );
 }
