@@ -32,7 +32,7 @@ export function RootPage() {
             'absolute left-0 top-14 flex w-full flex-col gap-1 bg-yellow-500 p-2',
             'md:static md:top-auto md:flex md:w-auto md:flex-row md:gap-2 md:bg-yellow-400 md:p-0'
           )}>
-          {auth.authenticated ? (
+          {auth.currentUser ? (
             <button
               className={classNames(
                 'btn block rounded-lg bg-lime-600 px-4 py-2 text-center font-semibold text-white',

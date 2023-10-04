@@ -11,7 +11,6 @@ import { auth } from '../firebase';
 
 export type AuthContext = {
   currentUser: User | null;
-  authenticated: boolean;
   login: (email: string, password: string) => Promise<UserCredential>;
   signup: (email: string, password: string) => Promise<UserCredential>;
   logout: () => Promise<void>;
@@ -41,7 +40,6 @@ export function AuthProvider({ children }: Props) {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log(user);
       setCurrentUser(user);
       setLoading(false);
     });
@@ -51,7 +49,6 @@ export function AuthProvider({ children }: Props) {
 
   const value = {
     currentUser,
-    authenticated: currentUser ? true : false,
     login,
     signup,
     logout

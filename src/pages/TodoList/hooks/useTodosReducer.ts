@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from 'react';
-import { addDoc, collection, deleteDoc, doc, getDocs, setDoc } from 'firebase/firestore';
+import { addDoc, collection, deleteDoc, doc, getDocs, query, setDoc, where } from 'firebase/firestore';
 import { useImmerReducer } from 'use-immer';
 import { Todo, todoConverter } from '../../../domains';
 import { useAuth } from '../../../hooks/useAuth';
@@ -18,11 +18,13 @@ export function useTodosReducer(): [Todo[], TodosDispatchActions] {
 
   const reload = useCallback(
     async function reload() {
-      const snapshot = await getDocs(collection(db, 'todos').withConverter(todoConverter));
+      const todosCollection = collection(db, 'todos').withConverter(todoConverter);
+      const todosQuery = query(todosCollection, where('userId', '==', auth.currentUser?.uid));
+      const snapshot = await getDocs(todosQuery);
       const todos = snapshot.docs.flatMap((doc) => doc.data());
       dispatch({ type: 'reload', todos });
     },
-    [dispatch]
+    [auth, dispatch]
   );
 
   const create = useCallback(
