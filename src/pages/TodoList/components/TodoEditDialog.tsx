@@ -48,9 +48,9 @@ export function TodoEditDialog({ todo, onClose }: Props) {
         console.error(e);
         setError('An unexpected error occurred.');
       }
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   }
   return (
     <ModalDialog className="w-3/4 rounded-xl border-2 border-yellow-600" show={true} onHide={onClose}>

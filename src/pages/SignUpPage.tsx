@@ -39,9 +39,9 @@ export function SignUpPage() {
         console.error(e);
         setError('An unexpected error occurred.');
       }
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   }
 
   return (
