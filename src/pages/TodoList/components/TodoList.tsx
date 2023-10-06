@@ -30,7 +30,6 @@ export function TodoList() {
   }, [dispatch]);
 
   if (error !== null) {
-    console.log('pico');
     return (
       <div className="flex h-full flex-col items-center justify-center gap-4">
         <div className="rounded-lg border border-red-500 bg-red-200 p-2 text-center text-sm">{error}</div>
